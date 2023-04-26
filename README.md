@@ -1,52 +1,74 @@
-# Project Name
-> Outline a brief description of your project.
-
+# Project Name : House Price Prediction assignment
+> This is the case study for a advance understanding of multiple linear regression model using Lasso and Ridge.
 
 ## Table of Contents
 * [General Info](#general-information)
-* [Technologies Used](#technologies-used)
+* [Libraries Used in Python](#libraries-used)
 * [Conclusions](#conclusions)
-* [Acknowledgements](#acknowledgements)
-
-<!-- You can include any other section that is pertinent to your problem -->
-
-## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
-
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
-
-## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
-
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+* [Acknowledgements](#acknowledgements) 
+* [Team Members](#teammembers)
 
 
-## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
+## General Information <a name="general-information"></a>
+A US-based housing company named Surprise Housing has decided to enter the Australian market. The company uses data analytics to purchase houses at a price below their actual value and flip them at a higher price. For the same purpose, the company has collected a data set from house sales in Australia. The data is provided in the csv file below.
 
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
+The company is looking at prospective properties to buy to enter the market.
 
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
+We are required to build a regression model using regularization, so as to predict the actual value of the prospective properties and decide whether to invest in them or not.
 
+**The company wants to know:**
 
-## Contact
-Created by [@githubusername] - feel free to contact me!
+- Which variables are significant in predicting the price of a house
 
+- How well those variables describe the price of a house
 
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
+**Goal:**
+We need to model the price of houses with the available independent variables. This model will then be used by the management to understand how exactly the prices vary with the variables. They can accordingly manipulate the strategy of the firm and concentrate on areas that will yield high returns. Further, the model will be a good way for management to understand the pricing dynamics of a new market.
 
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+**We are going to solve the problem in 4 sections i.e. :**
+- Data understanding and exploration
+- Data Visualisation 
+- Data preparation
+- Model building and evaluation
+
+## Libraries Used in Python <a name="libraries-used"></a>
+- numpy 
+- pandas
+- matplotlib.pyplot
+- seaborn 
+- missingno
+- sklearn
+- statsmodels
+
+## Conclusions <a name="conclusions"></a>
+ Following are the observation and respective suggestion to consider while deciding house pricing:
+
+- The higher values of positive coeeficients suggest a high sale value.
+
+ |  Feature  |  Description  |
+ |  ---  |  ---  |
+ |  GrLivArea  |  Above grade (ground) living area square feet  |
+ |  OverallQual  |  Rates the overall material and finish of the house  |
+ |  OverallCond  |  Rates the overall condition of the house  |
+ |  TotalBsmtSF  |  Total square feet of basement area  |
+ |  PropAge   |Age of the property at the time of selling |
+        
+        
+        
+- The higher values of negative coeeficients suggest a decrease in sale value.
+
+   |  Feature  |  Description  |
+   |  ---  |  ---  |
+   |  KitchenQual_TA  |  Kitchen quality as Typical/Average  |
+   |  Foundation_CBlock  |  Type of foundation as Cinder Block  |
+   |  HeatingQC_TA	  |  Heating quality and condition as Average/Typical |
+    
+
+- When the market value of the property is lower than the Predicted Sale Price, its the time to buy.
+
+## Acknowledgements <a name="acknowledgements"></a>
+- This project is given by Upgrad as an assignment case study
+- All the data and requirements are provided by Upgrad.
+
+## Team Members <a name="teammembers"></a>
+Assignment done solely by Preity Rashmi
